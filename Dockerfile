@@ -42,7 +42,7 @@ RUN set -x \
     && echo 'exec /usr/sbin/nginx -g "daemon off;"' >> /start.sh \
     && chmod +x /start.sh
 
-EXPOSE 80
+EXPOSE 8080
 
 STOPSIGNAL SIGTERM
 
