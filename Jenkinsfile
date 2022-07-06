@@ -22,6 +22,7 @@ spec:
     stage("Pushing Image to GCR") {
       steps {
         container('gcloud') {
+          sh gcloud auth list
           sh "PYTHONUNBUFFERED=1 gcloud builds submit -t  gcr.io/gj-playground/photobooth . "
           }
         }
